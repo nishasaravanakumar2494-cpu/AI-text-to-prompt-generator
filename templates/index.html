@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Text to Prompt Generator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        margin: 0;
+        background-color: #f5f7fa; /* ✅ soft light background */
+        color: #333333; /* dark text for readability */
+      }
+
+      h2 {
+        font-weight: bold;
+        color: #6a1b9a; /* ✅ purple accent for welcome heading */
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .container {
+        display: flex;
+        gap: 20px;
+        height: 80vh;
+      }
+
+      .box {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      textarea {
+        flex: 1;
+        font-size: 16px;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        outline: none;
+        background-color: #ffffff; /* white input/output boxes */
+        color: #333333;
+      }
+
+      button {
+        height: 50px;
+        font-size: 18px;
+        margin-top: 10px;
+        cursor: pointer;
+        border: none;
+        border-radius: 8px;
+        background-color: #6a1b9a; /* purple button */
+        color: #ffffff;
+        font-weight: bold;
+      }
+
+      button:hover {
+        background-color: #8e24aa; /* darker purple hover */
+      }
+
+      /* Specific heading colors */
+      .input-heading {
+        color: #d32f2f; /* ✅ muted red */
+      }
+
+      .output-heading {
+        color: #388e3c; /* ✅ forest green */
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Welcome!Am Your Text to Prompt Generator Friend</h2>
+
+    <div class="container">
+      <!-- LEFT SIDE -->
+      <div class="box">
+        <h3 class="input-heading">Write your Text Here</h3>
+        <textarea id="inputText" placeholder="Type your text..."></textarea>
+        <button onclick="makePrompt()">Make Prompt</button>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="box">
+        <h3 class="output-heading">Output Prompt</h3>
+        <textarea
+          id="outputText"
+          readonly
+          placeholder="Prompt will appear here"
+        ></textarea>
+      </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
